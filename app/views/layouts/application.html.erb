@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GiftSwap</title>
+    <title>The Bee-List</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="row">
+      <nav class="navbar bg-primary">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="/"><%= image_tag("") %></a>
+          </div>
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+
+            <% else %>
+
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid" id="main">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p>&copy;Gift Swap
+
+
+        </p>
+
+      </div>
+    </div>
   </body>
 </html>
