@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root 'homepage#index'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, only: [:create, :update]
+  resources :users, only: [:new, :create, :update]
 end
