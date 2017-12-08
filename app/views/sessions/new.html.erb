@@ -1,0 +1,19 @@
+<form id="login-form" method="post" action="/sessions">
+  <div class="container">
+    <div class="login-header">
+      <h1>Login</h1>
+    </div>
+  </div>
+  <div class="container" id="login-label">
+    <%= render 'shared/error_messages' %>
+  </div>
+  <div class="container login-container">
+    <label id="login-label"><b>Email</b></label>
+    <input id="login-email" type="email" placeholder="Enter Email" name="session[email]" required>
+
+    <label id="login-label"><b>Password</b></label>
+    <input id="login-password" type="password" placeholder="Enter Password" name="session[password]" required>
+
+    <button id="login-button" type="submit">Login</button>
+  </div>
+</form>
