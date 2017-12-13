@@ -20,12 +20,13 @@
       <nav class="navbar bg-primary">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a href="/"><%= image_tag("") %></a>
+            <a href="/">Home</a>
           </div>
           <ul class="nav navbar-nav">
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? %>
+              <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
 
             <% else %>
               <li><%= link_to "Register", new_user_path %></li>
